@@ -2,7 +2,7 @@
 
 A modern frontend web app built with **Vanilla JavaScript ES6+** that lets users search movies, apply filters, explore cast and trailers, and discover where to watch them — all powered by the **TMDB API**.
 
-🔗 Live demo: https://josedavidhernandez.com/movie-explorer
+🔗 Live demo: [Movie Explorer Demo Website](https://movie-explorer-david.netlify.app/)
 
 ![Movie Explorer Screenshot](https://i.imgur.com/fYzVMBY.jpeg)
 
@@ -48,33 +48,14 @@ Open `index.html` with **Live Server** or any static server.
 ---
 
 ## 📁 Project Structure
-movie-explorer/
-├── index.html
-├── css/
-│   ├── main.css
-│   ├── layout.css
-│   └── components.css
-└── js/
-├── main.js
-├── api/
-│   └── tmdb-api.js
-├── components/
-│   ├── filters.js
-│   ├── loader.js
-│   ├── movie-card.js
-│   ├── movie-list.js
-│   ├── movie-modal.js
-│   └── search-bar.js
-├── models/
-│   └── Movie.js
-├── services/
-│   ├── map-service.js
-│   ├── storage-service.js
-│   └── theme-service.js
-└── utils/
-├── constants.js
-├── debounce.js
-└── helpers.js
+- `index.html`
+- `css/` — main.css, layout.css, components.css
+- `js/main.js` — app entry point
+- `js/api/` — tmdb-api.js
+- `js/components/` — filters, loader, movie-card, movie-list, movie-modal, search-bar
+- `js/models/` — Movie.js
+- `js/services/` — map-service, storage-service, theme-service
+- `js/utils/` — constants, debounce, helpers
 
 ---
 
