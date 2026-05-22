@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./assets/libs/leaflet.css">
+  <script src="./assets/libs/leaflet.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 class="logo">Movie Explorer</h1>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">☀️</button>
+    <div class="search-wrapper">
+      <form id="search-form" class="search-form">
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar película..." autocomplete="off">
+        <button type="submit" class="search-button">Buscar</button>
+      </form>
+      <div id="search-history" class="search-history"></div>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <aside class="sidebar">
+      <section class="filters-section">
+        <h3>Filtros:</h3>
+        <select id="order-by-filter">
+          <option value="">Ordenar películas por...</option>
+          <option value="popularity.desc">Más populares</option>
+          <option value="popularity.asc">Menos populares</option>
+          <option value="vote_average.desc">Mejor puntuación</option>
+          <option value="vote_average.asc">Peor puntuación</option>
+        </select>
+        <select id="year-filter">
+          <option value="">Todas las décadas</option>
+          <option value="1900">Desde 1900s en adelante</option>
+          <option value="1910">Desde 1910s en adelante</option>
+          <option value="1920">Desde 1920s en adelante</option>
+          <option value="1930">Desde 1930s en adelante</option>
+          <option value="1940">Desde 1940s en adelante</option>
+          <option value="1950">Desde 1950s en adelante</option>
+          <option value="1960">Desde 1960s en adelante</option>
+          <option value="1970">Desde 1970s en adelante</option>
+          <option value="1980">Desde 1980s en adelante</option>
+          <option value="1990">Desde 1990s en adelante</option>
+          <option value="2000">Desde 2000s en adelante</option>
+          <option value="2010">Desde 2010s en adelante</option>
+          <option value="2020">Desde 2020s en adelante</option>
+        </select>
+        <select id="genre-filter">
+          <option value="">Todos los géneros</option>
+        </select>
+        <select id="rating-filter">
+          <option value="">Todas las puntuaciones</option>
+          <option value="5">+5 o mejor</option>
+          <option value="7">+7 o mejor</option>
+          <option value="8">+8 o mejor</option>
+        </select>
+      </section>
+    </aside>
+
+    <section class="movies-section">
+      <div id="movies-grid" class="movies-grid"></div>
+      <p id="loading-text" class="loading-text hidden">Cargando más pelis...</p>
+      <div id="sentinel"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Movie Explorer © - J. David Hernández</p>
+  </footer>
+
+  <div id="movie-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close">X</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>
